@@ -1,0 +1,19 @@
+.player__control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.player__btn {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.player__play {
+    font-size: 40px;
+}
+
+.active {
+    color: red;
+}

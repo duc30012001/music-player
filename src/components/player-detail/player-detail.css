@@ -1,0 +1,12 @@
+.player__duration {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.player__time {
+}
+
+.player__range {
+    width: 100%;
+}
