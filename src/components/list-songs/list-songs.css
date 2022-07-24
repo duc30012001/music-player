@@ -65,11 +65,13 @@
 
 .list-songs__song:hover {
     cursor: pointer;
-    background-color: #e4e4e4;
+    background-color: var(--gray-color);
+    color: var(--red-color);
 }
 
 .list-songs__thumb > img {
     width: 60px;
+    border-radius: 8px;
 }
 
 .list-songs__detail {

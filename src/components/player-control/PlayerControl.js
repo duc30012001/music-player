@@ -1,6 +1,14 @@
-import React from "react";
-import buttons from "./buttons";
+import React, { useState } from "react";
 import "./player-control.css";
+import {
+    MdShuffle,
+    MdPlayCircle,
+    MdSkipPrevious,
+    MdSkipNext,
+    MdPauseCircle,
+    MdRepeatOne,
+    MdRepeat,
+} from "react-icons/md";
 
 const PlayerControl = ({
     index,
@@ -10,71 +18,97 @@ const PlayerControl = ({
     length,
     song,
 }) => {
+    const [repeatMode, setRepeatMode] = useState(0);
+    const [isShuffle, setIsShuffle] = useState(false);
+
+    // Xu ly khi bam nut play/pause
     const handlePlay = () => {
-        if (isPlaying) {
-            song.pause();
-            // setIsPlay(false);
-        } else {
-            song.play();
-            // setIsPlay(true);
-        }
+        isPlaying ? song.pause() : song.play();
         setIsPlay(!isPlaying);
     };
 
     const autoPlay = () => {
-        if (isPlaying) {
-            song.autoplay = true;
-        } else {
-            song.autoplay = false;
-        }
+        isPlaying ? (song.autoplay = true) : (song.autoplay = false);
     };
 
+    // Xu ly khi chuyen sang bai tiep theo
     const handleNext = () => {
-        if (index === length - 1) {
-            setId(0);
+        if (isShuffle) {
+            let nextId = Math.floor(Math.random() * length);
+            setId(nextId);
         } else {
-            setId(index + 1);
+            index === length - 1 ? setId(0) : setId(index + 1);
         }
         autoPlay();
     };
 
+    // Xu ly khi chuyen sang bai phia truoc
     const handlePre = () => {
-        if (index === 0) {
-            setId(length - 1);
-        } else {
-            setId(index - 1);
-        }
+        index === 0 ? setId(length - 1) : setId(index - 1);
         autoPlay();
     };
+
+    // Xu ly khi phat ngau nhien
+    const handleShuffle = () => {
+        setIsShuffle(!isShuffle);
+    };
+
+    // Xu ly khi chon lap lai bai hat
+    const handleRepeat = () => {
+        repeatMode === 2 ? setRepeatMode(0) : setRepeatMode(repeatMode + 1);
+    };
+
+    // Xu ly khi ket thuc bai hat
+    const handleEnd = () => {
+        if (repeatMode === 0 && index === 19) {
+            setIsPlay(false);
+            return;
+        }
+        if (repeatMode < 2) handleNext();
+    };
+
+    if (song) {
+        repeatMode === 2 ? (song.loop = true) : (song.loop = false);
+        song.onended = () => {
+            handleEnd();
+        };
+    }
 
     return (
         <div className="player__control">
-            <button className="player__btn player__shuffle">
-                <img src={buttons.shuffleBtn} alt="" />
+            <button
+                className={`player__btn player__shuffle ${
+                    isShuffle ? "active" : ""
+                }`}
+                onClick={() => handleShuffle()}
+            >
+                <MdShuffle />
             </button>
             <button
                 className="player__btn player__pre"
                 onClick={() => handlePre()}
             >
-                <img src={buttons.preBtn} alt="" />
+                <MdSkipPrevious />
             </button>
             <button
                 className="player__btn player__play"
                 onClick={() => handlePlay()}
             >
-                <img
-                    src={isPlaying ? buttons.pauseBtn : buttons.playBtn}
-                    alt=""
-                />
+                {isPlaying ? <MdPauseCircle /> : <MdPlayCircle />}
             </button>
             <button
                 className="player__btn player__next"
                 onClick={() => handleNext()}
             >
-                <img src={buttons.nextBtn} alt="" />
+                <MdSkipNext />
             </button>
-            <button className="player__btn player__repeat">
-                <img src={buttons.repeatBtn} alt="" />
+            <button
+                className={`player__btn player__repeat ${
+                    repeatMode > 0 ? "active" : ""
+                }`}
+                onClick={() => handleRepeat()}
+            >
+                {repeatMode <= 1 ? <MdRepeat /> : <MdRepeatOne />}
             </button>
         </div>
     );

@@ -17,10 +17,9 @@ const ListSongs = ({ songs }) => {
         }
     };
 
-    const setCurrentTime = useCallback((dur) => {
+    const setCurrentTime = (dur) => {
         songRef.current.currentTime = dur;
-        console.log(dur);
-    });
+    };
 
     const setIsPlay = (isPlay) => {
         setIsPlaying(isPlay);
