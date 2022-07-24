@@ -1,0 +1,14 @@
+.player__control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.player__btn {
+    background-color: transparent;
+    border: none;
+    width: 25px;
+}
+
+.player__play {
+    width: 50px;
+}

@@ -5,7 +5,6 @@
     padding-top: 40px;
     padding-bottom: 40px;
     height: 100vh;
-    font-family: "Inter", sans-serif;
 }
 
 .container > div {
@@ -28,41 +27,14 @@
     margin-top: 20px;
     margin-bottom: 30px;
     font-size: 20px;
+    height: 45px;
 }
 
 .player__thumb {
     border-radius: 10px;
 }
 
-.player__duration {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-.player__time {
-}
-
-.player__range {
-    width: 100%;
-}
-
 .player__song {
-}
-
-.player__control {
-    display: flex;
-    justify-content: space-between;
-}
-
-.player__btn {
-    background-color: transparent;
-    border: none;
-    width: 25px;
-}
-
-.player__play {
-    width: 50px;
 }
 
 /* ----------------------- LIST SONGS ------------------------- */

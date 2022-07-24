@@ -1,28 +1,33 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import "./list-songs.css";
-import buttons from "./button.js";
-import button from "./button.js";
-import PlayerDetail from "../player-range/PlayerDetail";
+import PlayerDetail from "../player-detail/PlayerDetail";
+import PlayerControl from "../player-control/PlayerControl";
 
 const ListSongs = ({ songs }) => {
     const [index, setIndex] = useState(0);
-    const songRef = useRef();
-    const [isPlay, setIsPlay] = useState(false);
-
-    const handlePlay = () => {
-        if (isPlay) {
-            songRef.current.pause();
-        } else {
-            songRef.current.play();
-        }
-        setIsPlay(!isPlay);
-    };
+    const songRef = useRef(document.getElementById("song"));
+    const [isPlaying, setIsPlaying] = useState(false);
 
     const handleChooseSong = (song) => {
         setIndex(song.id);
-        if (!isPlay) {
-            songRef.current.play();
+        if (isPlaying) {
+            songRef.current.autoplay = true;
+        } else {
+            songRef.current.autoplay = false;
         }
+    };
+
+    const setCurrentTime = useCallback((dur) => {
+        songRef.current.currentTime = dur;
+        console.log(dur);
+    });
+
+    const setIsPlay = (isPlay) => {
+        setIsPlaying(isPlay);
+    };
+
+    const setId = (id) => {
+        setIndex(id);
     };
 
     return (
@@ -36,31 +41,19 @@ const ListSongs = ({ songs }) => {
                 <h2 className="player__title">
                     {songs[index].name} - {songs[index].author}
                 </h2>
-                <PlayerDetail song={songRef.current} />
+                <PlayerDetail
+                    song={songRef.current}
+                    setCurrentTime={setCurrentTime}
+                />
+                <PlayerControl
+                    index={index}
+                    setId={setId}
+                    isPlaying={isPlaying}
+                    setIsPlay={setIsPlay}
+                    length={songs.length}
+                    song={songRef.current}
+                />
                 <audio ref={songRef} id="song" src={songs[index].url} />
-                <div className="player__control">
-                    <button className="player__btn player__shuffle">
-                        <img src={buttons.shuffleBtn} alt="" />
-                    </button>
-                    <button className="player__btn player__pre">
-                        <img src={buttons.preBtn} alt="" />
-                    </button>
-                    <button
-                        className="player__btn player__play"
-                        onClick={() => handlePlay()}
-                    >
-                        <img
-                            src={isPlay ? buttons.pauseBtn : buttons.playBtn}
-                            alt=""
-                        />
-                    </button>
-                    <button className="player__btn player__next">
-                        <img src={buttons.nextBtn} alt="" />
-                    </button>
-                    <button className="player__btn player__repeat">
-                        <img src={buttons.repeatBtn} alt="" />
-                    </button>
-                </div>
             </div>
             <div className="list-songs">
                 <h1 className="list-songs__header">Danh sách bài hát</h1>
