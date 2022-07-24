@@ -140,3 +140,6 @@ const song = [
         thumb: "https://data.chiasenhac.com/data/cover/21/20074.jpg",
     },
 ];
+
+[song[0], song[1]] = [song[1], song[0]];
+console.log(song);
