@@ -1,16 +1,16 @@
-.player__control {
+.container {
     display: flex;
     justify-content: space-between;
 }
 
-.player__btn {
+.button {
     background-color: transparent;
     border: none;
     font-size: 30px;
     cursor: pointer;
 }
 
-.player__play {
+.playBtn {
     font-size: 40px;
 }
 

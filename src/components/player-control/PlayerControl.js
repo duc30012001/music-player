@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./player-control.css";
+import style from "./playerControl.module.css";
 import {
     MdShuffle,
     MdPlayCircle,
@@ -17,12 +17,18 @@ const PlayerControl = ({
     setIsPlay,
     length,
     song,
+    isNull,
 }) => {
     const [repeatMode, setRepeatMode] = useState(0);
     const [isShuffle, setIsShuffle] = useState(false);
+    console.log(isNull);
 
     // Xu ly khi bam nut play/pause
     const handlePlay = () => {
+        if (isNull) {
+            setIsPlay(false);
+            return;
+        }
         isPlaying ? song.pause() : song.play();
         setIsPlay(!isPlaying);
     };
@@ -75,27 +81,30 @@ const PlayerControl = ({
     }
 
     return (
-        <div className="player__control">
+        <div className={style.container}>
             <button
-                className={`player__btn player__shuffle ${
-                    isShuffle ? "active" : ""
+                className={`${style.button} ${
+                    isShuffle ? `${style.active}` : ""
                 }`}
                 onClick={handleShuffle}
             >
                 <MdShuffle />
             </button>
-            <button className="player__btn player__pre" onClick={handlePre}>
+            <button className={style.button} onClick={handlePre}>
                 <MdSkipPrevious />
             </button>
-            <button className="player__btn player__play" onClick={handlePlay}>
+            <button
+                className={`${style.button} ${style.playBtn}`}
+                onClick={handlePlay}
+            >
                 {isPlaying ? <MdPauseCircle /> : <MdPlayCircle />}
             </button>
-            <button className="player__btn player__next" onClick={handleNext}>
+            <button className={style.button} onClick={handleNext}>
                 <MdSkipNext />
             </button>
             <button
-                className={`player__btn player__repeat ${
-                    repeatMode > 0 ? "active" : ""
+                className={`${style.button} ${
+                    repeatMode > 0 ? `${style.active}` : ""
                 }`}
                 onClick={handleRepeat}
             >

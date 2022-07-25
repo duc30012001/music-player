@@ -1,13 +1,15 @@
 .container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 60px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    height: 100vh;
+    height: calc(100vh - 80px);
+    /* width: 1000px; */
+    flex-wrap: wrap;
 }
 
-.container > div {
+.player,
+.list {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: rgb(100 100 111 / 20%) 0 7px 29px 0px;
@@ -16,39 +18,52 @@
 
 /* -------------------------- PLAYER -------------------------- */
 .player {
-    width: 400px;
+    width: 100%;
+    min-height: 350px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
 }
 
-.player__title {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-size: 20px;
-    height: 45px;
+.playerDetail {
+    flex-grow: 1;
 }
 
-.player__thumb {
+.playerName {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.playerAuthor {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.playerThumb {
     border-radius: 10px;
 }
 
-.player__song {
+.playerSong {
 }
 
 /* ----------------------- LIST SONGS ------------------------- */
-.list-songs {
+.list {
     width: 400px;
 }
 
-.list-songs__header {
+.listHeader {
     text-align: center;
     margin-bottom: 30px;
     font-size: 24px;
 }
 
-.list-songs__songs {
+.listSongs {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -57,33 +72,49 @@
     padding-right: 20px;
 }
 
-.list-songs__song {
+.selected {
+    background-color: var(--gray-color);
+    color: var(--red-color);
+}
+
+.listSong {
     display: flex;
     gap: 20px;
     /* justify-content: space-between; */
 }
 
-.list-songs__song:hover {
+.listSong:hover {
     cursor: pointer;
     background-color: var(--gray-color);
     color: var(--red-color);
 }
 
-.list-songs__thumb > img {
+.listSongThumb {
     width: 60px;
+    height: 60px;
     border-radius: 8px;
 }
 
-.list-songs__detail {
+.listSongDetail {
+    flex-grow: 1;
 }
 
-.list-songs__name {
+.listSongName {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 5px;
 }
 
-.list-songs__author {
+.listSongAuthor {
     font-size: 14px;
     font-weight: 400;
+}
+
+.listSongBtn {
+    align-self: center;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
 }

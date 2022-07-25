@@ -1,17 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./player-detail.css";
+import style from "./playerDetail.module.css";
 
-const PlayerRange = ({ song, setCurrentTime }) => {
+const PlayerRange = ({ song, setCurrentTime, isNull }) => {
     const [dur, setDur] = useState("00:00");
     const [curTime, setCurTime] = useState("00:00");
     const [value, setValue] = useState(0);
 
-    // let value = useRef(0);
+    console.log(isNull);
     const rangeRef = useRef();
 
     useEffect(() => {
         const logCurTime = setInterval(() => {
             setValue(Math.floor((song?.currentTime / song?.duration) * 100));
+            rangeRef.current.style.backgroundSize = `${
+                (song?.currentTime / song?.duration) * 100
+            }% 10px`;
 
             // hien thi thoi gian hien tai cua bai hat
             let minCur = Math.floor(song?.currentTime / 60);
@@ -30,8 +33,16 @@ const PlayerRange = ({ song, setCurrentTime }) => {
             setDur(dur);
         }, 1000);
 
+        if (isNull) {
+            song.pause();
+            clearInterval(logCurTime);
+            rangeRef.current.style.backgroundSize = "0 10px";
+            setCurTime("00:00");
+            setDur("00:00");
+        }
+
         return () => clearInterval(logCurTime);
-    }, [song]);
+    }, [song, isNull]);
 
     const handleOnChange = (e) => {
         rangeRef.current.style.backgroundSize = `${e.target.value}% 10px`;
@@ -41,19 +52,19 @@ const PlayerRange = ({ song, setCurrentTime }) => {
     };
 
     return (
-        <div className="player__detail">
+        <div className={style.container}>
             <input
+                className={style.range}
                 ref={rangeRef}
                 type="range"
-                className="player__range"
                 min="1"
                 max="100"
-                value={value}
+                value={isNull ? 0 : value}
                 onChange={(e) => handleOnChange(e)}
             />
-            <div className="player__duration">
-                <span className="player__time">{curTime}</span>
-                <span className="player__song-duration">{dur}</span>
+            <div className={style.detail}>
+                <span className={style.current}>{curTime}</span>
+                <span className={style.duration}>{dur}</span>
             </div>
         </div>
     );

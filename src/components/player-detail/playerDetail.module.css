@@ -1,13 +1,10 @@
-.player__duration {
+.detail {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
-.player__time {
-}
-
-.player__range {
+.range {
     width: 100%;
     -webkit-appearance: none;
     height: 10px;
@@ -19,7 +16,7 @@
     margin-bottom: 10px;
 }
 
-.player__range::-webkit-slider-thumb {
+.range::-webkit-slider-thumb {
     -webkit-appearance: none;
     background-color: transparent;
     width: 10px;
