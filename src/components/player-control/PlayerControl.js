@@ -80,33 +80,24 @@ const PlayerControl = ({
                 className={`player__btn player__shuffle ${
                     isShuffle ? "active" : ""
                 }`}
-                onClick={() => handleShuffle()}
+                onClick={handleShuffle}
             >
                 <MdShuffle />
             </button>
-            <button
-                className="player__btn player__pre"
-                onClick={() => handlePre()}
-            >
+            <button className="player__btn player__pre" onClick={handlePre}>
                 <MdSkipPrevious />
             </button>
-            <button
-                className="player__btn player__play"
-                onClick={() => handlePlay()}
-            >
+            <button className="player__btn player__play" onClick={handlePlay}>
                 {isPlaying ? <MdPauseCircle /> : <MdPlayCircle />}
             </button>
-            <button
-                className="player__btn player__next"
-                onClick={() => handleNext()}
-            >
+            <button className="player__btn player__next" onClick={handleNext}>
                 <MdSkipNext />
             </button>
             <button
                 className={`player__btn player__repeat ${
                     repeatMode > 0 ? "active" : ""
                 }`}
-                onClick={() => handleRepeat()}
+                onClick={handleRepeat}
             >
                 {repeatMode <= 1 ? <MdRepeat /> : <MdRepeatOne />}
             </button>

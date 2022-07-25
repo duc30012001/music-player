@@ -80,6 +80,7 @@
 .list-songs__name {
     font-size: 16px;
     font-weight: 600;
+    margin-bottom: 5px;
 }
 
 .list-songs__author {

@@ -9,4 +9,20 @@
 
 .player__range {
     width: 100%;
+    -webkit-appearance: none;
+    height: 10px;
+    background-color: #eee;
+    background-image: linear-gradient(var(--red-color), var(--red-color));
+    background-repeat: no-repeat;
+    background-size: 0% 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.player__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
 }

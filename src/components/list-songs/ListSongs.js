@@ -1,12 +1,13 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./list-songs.css";
 import PlayerDetail from "../player-detail/PlayerDetail";
 import PlayerControl from "../player-control/PlayerControl";
 
 const ListSongs = ({ songs }) => {
     const [index, setIndex] = useState(0);
-    const songRef = useRef(document.getElementById("song"));
     const [isPlaying, setIsPlaying] = useState(false);
+
+    const songRef = useRef();
 
     const handleChooseSong = (song) => {
         setIndex(song.id);
@@ -28,6 +29,14 @@ const ListSongs = ({ songs }) => {
     const setId = (id) => {
         setIndex(id);
     };
+
+    // Chay vong lap 2 lan de load duoc bai hat ban dau
+    const [load, setLoad] = useState(0);
+    useEffect(() => {
+        for (let i = 0; i < 2; i++) {
+            setLoad(i);
+        }
+    }, [load]);
 
     return (
         <div className="container">
