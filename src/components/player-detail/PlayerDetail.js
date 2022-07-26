@@ -5,8 +5,6 @@ const PlayerRange = ({ song, setCurrentTime, isNull }) => {
     const [dur, setDur] = useState("00:00");
     const [curTime, setCurTime] = useState("00:00");
     const [value, setValue] = useState(0);
-
-    console.log(isNull);
     const rangeRef = useRef();
 
     useEffect(() => {

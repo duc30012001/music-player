@@ -21,7 +21,6 @@ const PlayerControl = ({
 }) => {
     const [repeatMode, setRepeatMode] = useState(0);
     const [isShuffle, setIsShuffle] = useState(false);
-    console.log(isNull);
 
     // Xu ly khi bam nut play/pause
     const handlePlay = () => {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import style from "./App.module.css";
-import listSongs from "./listSongs";
+import listSongs from "./list-songs/listSongs";
 import NowPlaying from "./components/now-playing/NowPlaying";
 import ListSongs from "./components/list-songs/ListSongs";
 
