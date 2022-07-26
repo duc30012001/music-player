@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a23d3297.css",
+    "main.js": "/static/js/main.29808b7b.js",
+    "static/media/Tim Lai Bau Troi - Tuan Hung.mp3": "/static/media/Tim Lai Bau Troi - Tuan Hung.6c4e105cfae7fe22d7ec.mp3",
+    "static/media/Co Chang Trai Viet Len Cay - Phan Manh Q.mp3": "/static/media/Co Chang Trai Viet Len Cay - Phan Manh Q.f28d2611c3ef90600de9.mp3",
+    "static/media/Bao Tien Mot Mo Binh Yen_ - 14 Casper_ B.mp3": "/static/media/Bao Tien Mot Mo Binh Yen_ - 14 Casper_ B.0fd325c01a19cd357daa.mp3",
+    "static/media/Gac Lai Au Lo - Da LAB_ Miu Le.mp3": "/static/media/Gac Lai Au Lo - Da LAB_ Miu Le.e42080163a9a8360bf65.mp3",
+    "static/media/Buoc Qua Mua Co Don - Vu.mp3": "/static/media/Buoc Qua Mua Co Don - Vu.5ec4ca4086ceddc95e46.mp3",
+    "static/media/Em Khong La Duy Nhat - Toc Tien.mp3": "/static/media/Em Khong La Duy Nhat - Toc Tien.8e7c224d02c77205d417.mp3",
+    "static/media/Nam Lay Tay Anh - Tuan Hung.mp3": "/static/media/Nam Lay Tay Anh - Tuan Hung.8baaf0dc05c1723e5a79.mp3",
+    "static/media/Khong Sao Ma Em Day Roi - Suni Ha Linh_.mp3": "/static/media/Khong Sao Ma Em Day Roi - Suni Ha Linh_.0544f5c91adcebe5d809.mp3",
+    "static/media/Mai Mai Ben Nhau - Noo Phuoc Thinh.mp3": "/static/media/Mai Mai Ben Nhau - Noo Phuoc Thinh.81877d398e1eb4b56539.mp3",
+    "static/media/Buoc Qua Nhau - Vu.mp3": "/static/media/Buoc Qua Nhau - Vu.c50beb7de70c4883c373.mp3",
+    "static/media/Mat Troi Cua Em - Phuong Ly_ JustaTee.mp3": "/static/media/Mat Troi Cua Em - Phuong Ly_ JustaTee.79ed566b9e5657ed6f8b.mp3",
+    "static/media/Noi Minh Dung Chan - My Tam.mp3": "/static/media/Noi Minh Dung Chan - My Tam.7702c6e5a8ee2f0db002.mp3",
+    "static/media/Thang Dien - JustaTee_ Phuong Ly.mp3": "/static/media/Thang Dien - JustaTee_ Phuong Ly.9e3c301883859cec3e11.mp3",
+    "static/media/Co Ai Thuong Em Nhu Anh Catena_ - Toc Ti.mp3": "/static/media/Co Ai Thuong Em Nhu Anh Catena_ - Toc Ti.9561dfc0c5bcb1010b48.mp3",
+    "static/media/Thanh Xuan - Da LAB.mp3": "/static/media/Thanh Xuan - Da LAB.7bd61a637481d58db9b3.mp3",
+    "static/media/Anh Dech Can Gi Nhieu Ngoai Em - Den_ Vu.mp3": "/static/media/Anh Dech Can Gi Nhieu Ngoai Em - Den_ Vu.b7636535078a574c7485.mp3",
+    "static/media/Ngay Chua Giong Bao - Bui Lan Huong.mp3": "/static/media/Ngay Chua Giong Bao - Bui Lan Huong.529338fcd95621642018.mp3",
+    "static/media/Bat Coc Con Tim - Lou Hoang.mp3": "/static/media/Bat Coc Con Tim - Lou Hoang.35daf1258f51ae243516.mp3",
+    "static/media/Mot Nha - Da LAB.mp3": "/static/media/Mot Nha - Da LAB.713b6934064721d2ba31.mp3",
+    "static/media/default.png": "/static/media/default.5715f089b24dbf46a29e.png",
+    "index.html": "/index.html",
+    "main.a23d3297.css.map": "/static/css/main.a23d3297.css.map",
+    "main.29808b7b.js.map": "/static/js/main.29808b7b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a23d3297.css",
+    "static/js/main.29808b7b.js"
+  ]
+}
