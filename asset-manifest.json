@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/music-player/static/css/main.a23d3297.css",
-    "main.js": "/music-player/static/js/main.8c94f5bb.js",
+    "main.js": "/music-player/static/js/main.58ff358b.js",
     "static/media/Tim Lai Bau Troi - Tuan Hung.mp3": "/music-player/static/media/Tim Lai Bau Troi - Tuan Hung.6c4e105cfae7fe22d7ec.mp3",
     "static/media/Co Chang Trai Viet Len Cay - Phan Manh Q.mp3": "/music-player/static/media/Co Chang Trai Viet Len Cay - Phan Manh Q.f28d2611c3ef90600de9.mp3",
     "static/media/Bao Tien Mot Mo Binh Yen_ - 14 Casper_ B.mp3": "/music-player/static/media/Bao Tien Mot Mo Binh Yen_ - 14 Casper_ B.0fd325c01a19cd357daa.mp3",
@@ -21,13 +21,33 @@
     "static/media/Ngay Chua Giong Bao - Bui Lan Huong.mp3": "/music-player/static/media/Ngay Chua Giong Bao - Bui Lan Huong.529338fcd95621642018.mp3",
     "static/media/Bat Coc Con Tim - Lou Hoang.mp3": "/music-player/static/media/Bat Coc Con Tim - Lou Hoang.35daf1258f51ae243516.mp3",
     "static/media/Mot Nha - Da LAB.mp3": "/music-player/static/media/Mot Nha - Da LAB.713b6934064721d2ba31.mp3",
+    "static/media/BQMCD.jpg": "/music-player/static/media/BQMCD.5b19be9384b3670860ee.jpg",
+    "static/media/TX.jpg": "/music-player/static/media/TX.715d9de4bb43bcb05b80.jpg",
+    "static/media/TLBT.jpg": "/music-player/static/media/TLBT.be41e36ff8248d7c41ad.jpg",
+    "static/media/MTCE.jpg": "/music-player/static/media/MTCE.40143cbdc055bd1e28ee.jpg",
+    "static/media/MN.jpg": "/music-player/static/media/MN.35cc614dce24f7d58f25.jpg",
+    "static/media/TD.jpg": "/music-player/static/media/TD.506996a12edf658ea27c.jpg",
+    "static/media/GLAL.jpg": "/music-player/static/media/GLAL.ceaf75c1db82d626ed91.jpg",
+    "static/media/MMBN.jpg": "/music-player/static/media/MMBN.299dcda1c15f21e906ce.jpg",
+    "static/media/NMDC.jpg": "/music-player/static/media/NMDC.6870730b0995b4940dbe.jpg",
+    "static/media/CCTVLC.jpg": "/music-player/static/media/CCTVLC.80e194a1566bd1a36dba.jpg",
+    "static/media/LL.jpg": "/music-player/static/media/LL.1a9dbbb55c71f3807ada.jpg",
+    "static/media/NCGB.jpg": "/music-player/static/media/NCGB.4acb36266b71893ed794.jpg",
+    "static/media/ADCGNNE.jpg": "/music-player/static/media/ADCGNNE.b5949d51c8ae608ef2cc.jpg",
+    "static/media/BQN.jpg": "/music-player/static/media/BQN.42557b036c0f619a05f7.jpg",
+    "static/media/BCCT.jpg": "/music-player/static/media/BCCT.00ba6a78d3ce7fb5db2b.jpg",
+    "static/media/BTMMBY.jpg": "/music-player/static/media/BTMMBY.bab62b8ae076044c85e1.jpg",
+    "static/media/KSMEDR.jpg": "/music-player/static/media/KSMEDR.cb585f2594e8434de9b8.jpg",
+    "static/media/CATENA.jpg": "/music-player/static/media/CATENA.1feea99e68cc73607d7e.jpg",
+    "static/media/EKLDN.jpg": "/music-player/static/media/EKLDN.7a059cfda1d9495b972b.jpg",
+    "static/media/NLTA.jpg": "/music-player/static/media/NLTA.d4d825afb6572ff9b61c.jpg",
     "static/media/default.png": "/music-player/static/media/default.5715f089b24dbf46a29e.png",
     "index.html": "/music-player/index.html",
     "main.a23d3297.css.map": "/music-player/static/css/main.a23d3297.css.map",
-    "main.8c94f5bb.js.map": "/music-player/static/js/main.8c94f5bb.js.map"
+    "main.58ff358b.js.map": "/music-player/static/js/main.58ff358b.js.map"
   },
   "entrypoints": [
     "static/css/main.a23d3297.css",
-    "static/js/main.8c94f5bb.js"
+    "static/js/main.58ff358b.js"
   ]
 }
