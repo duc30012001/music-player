@@ -13,8 +13,8 @@ const App = () => {
 
     return (
         <div className={style.container}>
-            <NowPlaying songs={songs} setSongs={setListSongs} />
             <ListSongs songs={listSongs} setSongs={setListSongs} />
+            <NowPlaying songs={songs} setSongs={setListSongs} />
         </div>
     );
 };

@@ -12,6 +12,8 @@ const ListSongs = ({ songs, setSongs }) => {
 
     const songRef = useRef();
 
+    document.title = songs[index]?.name;
+
     // Kiem tra xem danh sach con bai hat nao nua khong
     useEffect(() => {
         setIsNull(songs.length === 0);
@@ -92,41 +94,51 @@ const ListSongs = ({ songs, setSongs }) => {
             </div>
             <div className={style.list}>
                 <h1 className={style.listHeader}>Danh sách đang phát</h1>
-                <ul className={style.listSongs}>
-                    {songs?.map((song, id) => {
-                        return (
-                            <li
-                                className={`${style.listSong} ${
-                                    id === index ? "selected" : ""
-                                }`}
-                                key={id}
-                                onClick={() => handleChooseSong(id)}
-                            >
-                                <img
-                                    src={song?.thumb}
-                                    alt=""
-                                    className={style.listSongThumb}
-                                />
-
-                                <div className={style.listSongDetail}>
-                                    <h3 className={style.listSongName}>
-                                        {song?.name}
-                                    </h3>
-                                    <h4 className={style.listSongAuthor}>
-                                        {song?.author}
-                                    </h4>
-                                </div>
-                                <button
-                                    className={style.listSongBtn}
-                                    title="Xoa khoi danh sach"
-                                    onClick={(e) => handleClearSong(e, id)}
+                <div className={style.listSongsContainer}>
+                    <ul className={style.listSongs}>
+                        {songs?.map((song, id) => {
+                            return (
+                                <li
+                                    className={`${style.listSong} ${
+                                        id === index ? `${style.selected}` : ""
+                                    }`}
+                                    key={id}
+                                    onClick={() => handleChooseSong(id)}
                                 >
-                                    <VscTrash />
-                                </button>
-                            </li>
-                        );
-                    })}
-                </ul>
+                                    <img
+                                        src={song?.thumb}
+                                        alt=""
+                                        className={style.listSongThumb}
+                                    />
+
+                                    <div className={style.listSongDetail}>
+                                        <h3 className={style.listSongName}>
+                                            {song?.name}
+                                        </h3>
+                                        <h4
+                                            className={`${
+                                                style.listSongAuthor
+                                            } ${
+                                                id === index
+                                                    ? `${style.redColor}`
+                                                    : ""
+                                            }`}
+                                        >
+                                            {song?.author}
+                                        </h4>
+                                    </div>
+                                    <button
+                                        className={style.listSongBtn}
+                                        title="Xoa khoi danh sach"
+                                        onClick={(e) => handleClearSong(e, id)}
+                                    >
+                                        <VscTrash />
+                                    </button>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </div>
             </div>
         </div>
     );

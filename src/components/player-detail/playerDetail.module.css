@@ -1,14 +1,17 @@
+.container {
+    margin-bottom: 20px;
+}
+
 .detail {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 
 .range {
     width: 100%;
     -webkit-appearance: none;
     height: 10px;
-    background-color: #eee;
+    background-color: var(--dark-color);
     background-image: linear-gradient(var(--red-color), var(--red-color));
     background-repeat: no-repeat;
     background-size: 0% 10px;
@@ -22,4 +25,19 @@
     width: 10px;
     height: 10px;
     border-radius: 8px;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        margin-bottom: 10px;
+    }
+
+    .range {
+        height: 8px;
+        margin-bottom: 5px;
+    }
+
+    .detail {
+        font-size: 14px;
+    }
 }

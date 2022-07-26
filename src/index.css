@@ -1,6 +1,9 @@
 :root {
     --red-color: #ff1919;
-    --gray-color: #f3f3f3;
+    --gray-color: #e3e3e3;
+    --bg-color: #fff;
+    --dark-color: #d0d0d1;
+    --darker-color: #818181;
 }
 
 body {
