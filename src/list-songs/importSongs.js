@@ -19,7 +19,7 @@ import KSMEDR from "../audio/Khong Sao Ma Em Day Roi - Suni Ha Linh_.mp3";
 import TLBT from "../audio/Tim Lai Bau Troi - Tuan Hung.mp3";
 import NLTA from "../audio/Nam Lay Tay Anh - Tuan Hung.mp3";
 
-export default {
+const SRC = {
     BCCT,
     MMBN,
     CATENA,
@@ -41,3 +41,5 @@ export default {
     TLBT,
     NLTA,
 };
+
+export default SRC;

@@ -19,7 +19,7 @@ import KSMEDR from "../thumb/KSMEDR.jpg";
 import TLBT from "../thumb/TLBT.jpg";
 import NLTA from "../thumb/NLTA.jpg";
 
-export default {
+const THUMB = {
     BCCT,
     MMBN,
     CATENA,
@@ -41,3 +41,5 @@ export default {
     TLBT,
     NLTA,
 };
+
+export default THUMB;
