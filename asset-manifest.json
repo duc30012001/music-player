@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/music-player/static/css/main.a23d3297.css",
-    "main.js": "/music-player/static/js/main.58ff358b.js",
+    "main.css": "/music-player/static/css/main.599f526e.css",
+    "main.js": "/music-player/static/js/main.6776b4f1.js",
     "static/media/Tim Lai Bau Troi - Tuan Hung.mp3": "/music-player/static/media/Tim Lai Bau Troi - Tuan Hung.6c4e105cfae7fe22d7ec.mp3",
     "static/media/Co Chang Trai Viet Len Cay - Phan Manh Q.mp3": "/music-player/static/media/Co Chang Trai Viet Len Cay - Phan Manh Q.f28d2611c3ef90600de9.mp3",
     "static/media/Bao Tien Mot Mo Binh Yen_ - 14 Casper_ B.mp3": "/music-player/static/media/Bao Tien Mot Mo Binh Yen_ - 14 Casper_ B.0fd325c01a19cd357daa.mp3",
@@ -43,11 +43,11 @@
     "static/media/NLTA.jpg": "/music-player/static/media/NLTA.d4d825afb6572ff9b61c.jpg",
     "static/media/default.png": "/music-player/static/media/default.5715f089b24dbf46a29e.png",
     "index.html": "/music-player/index.html",
-    "main.a23d3297.css.map": "/music-player/static/css/main.a23d3297.css.map",
-    "main.58ff358b.js.map": "/music-player/static/js/main.58ff358b.js.map"
+    "main.599f526e.css.map": "/music-player/static/css/main.599f526e.css.map",
+    "main.6776b4f1.js.map": "/music-player/static/js/main.6776b4f1.js.map"
   },
   "entrypoints": [
-    "static/css/main.a23d3297.css",
-    "static/js/main.58ff358b.js"
+    "static/css/main.599f526e.css",
+    "static/js/main.6776b4f1.js"
   ]
 }
