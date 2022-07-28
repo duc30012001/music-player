@@ -3,8 +3,10 @@ import style from "./App.module.css";
 import listSongs from "./list-songs/listSongs";
 import NowPlaying from "./components/now-playing/NowPlaying";
 import ListSongs from "./components/list-songs/ListSongs";
+import { TbPlaylist } from "react-icons/tb";
 
 const App = () => {
+    const [hide, setHide] = useState(true);
     const [songs, setSongs] = useState(listSongs);
 
     const setListSongs = (listSongs) => {
@@ -13,7 +15,13 @@ const App = () => {
 
     return (
         <div className={style.container}>
-            <ListSongs songs={listSongs} setSongs={setListSongs} />
+            <button
+                className={style.playListBtn}
+                onClick={() => setHide(!hide)}
+            >
+                <TbPlaylist />
+            </button>
+            {hide || <ListSongs songs={listSongs} setSongs={setListSongs} />}
             <NowPlaying songs={songs} setSongs={setListSongs} />
         </div>
     );
